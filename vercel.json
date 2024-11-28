@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/school.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/school.js"
+    }
+  ],
+  "env": {
+    "DB_HOST": "@db_host",
+    "DB_USER": "@db_user",
+    "DB_PASS": "@db_pass"
+  }
+}
